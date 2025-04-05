@@ -184,6 +184,29 @@
                 font-size: 0.8rem;
             }
         }
+
+        .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño máximo en pantallas grandes */
+    margin: 0 auto;
+    overflow: hidden; /* Evita desbordamientos */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ajusta el video para que llene el espacio sin bandas negras */
+}
+
+@media (max-width: 768px) {
+    .video-wrapper {
+        max-width: 90%;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -199,12 +222,13 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
-<div class="sidebar">
-    <div class="video-section">
-        <h1>Llamada Telefonica Con Rodrigo Mendez.</h1>
-        <iframe width="560" height="315" src="ENTREVISTA.mp4" frameborder="0" allowfullscreen></iframe>
+<div class="video-section">
+    <h1>Llamada Telefónica Con Rodrigo Mendez.</h1>
+    <div class="video-wrapper">
+        <video controls src="ENTREVISTA.mp4"  playsinline></video>
     </div>
 </div>
+
 
 
 <div class="container">
